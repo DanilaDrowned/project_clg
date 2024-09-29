@@ -1,0 +1,273 @@
+html {
+    overflow-x: hidden;
+}
+
+header {
+    text-transform: capitalize;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #076585;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0rem 10%;
+    box-shadow: 0 0.5px; 10px #000;
+    z-index: 2;
+}
+
+header .navbar ul {
+    display: flex;
+}
+
+header .navbar ul li {
+    position: relative;
+}
+
+header .navbar ul li a {
+    display: block;
+    font-family: Fantasy;
+    padding: 0.7rem;
+    color: #fff;
+    font-size: calc(12px * (18 - 12) * ((100vw - 300) / (1600 - 300)));
+    transition: 0.7s;
+}
+
+header .navbar ul li a:hover {
+    background-color: #72A0C1;
+    color: #FFFF00;
+}
+
+.main {
+    top: 57px;
+    left: 137px;
+    z-index: -1;
+}
+
+header .navbar ul li ul {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    width: 18rem;
+    background: #72A0C1;
+    display: none;
+
+}
+
+header .navbar ul li ul li {
+    flex-direction: column;
+    width: 100%;
+    border: .1rem solid rgba(0,0,0,.1);
+}
+
+header .navbar ul li ul li ul {
+    position: absolute;
+    left: 0;
+    width: 18rem;
+    top: 0;
+}
+
+header .navbar ul li:hover > ul {
+    display: initial;
+}
+
+#menu {
+    display: none;
+}
+
+header label {
+    font-size: 2rem;
+    color: #151515;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width:
+1250px) {
+
+    .fp_photo img {
+        width: 205px;
+        height: 205px;
+    }
+
+    div .fp_body {
+        position: absolute;
+        top: 39px;
+        left: 214px;
+        font-size: 25px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        text-align: left;
+        padding: 10px 10px 10px 10px;
+        text-transform: none;
+        width: 450px;
+        line-height: 41px;
+    }
+
+    div .fp_doc {
+        width: 200px;
+        left: 5px;
+    }
+
+    div .fp_doc_2 {
+        width: 440px;
+        height: 250px;
+        left: 219px;
+        top: 775px;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    header .navbar {
+        letter-spacing: 3px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+        border-top: .1rem solid rgba(0,0,0,.1);
+        display: none;
+    }
+
+    header .navbar ul {
+        flex-direction: column;
+    }
+
+    header .navbar ul li {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header .navbar ul li a {
+        display: block;
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+        padding: 0.7rem;
+        color: #FFFF00;
+        font-size: calc(12px * (18 - 12) * ((100vw - 300) / (1600 - 300)));
+        transition: 0.7s;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background: #72A0C1;
+    }
+
+    header .navbar ul li ul li ul {
+        position: relative:
+        width: 100%;
+        left: 0;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    label .fa-times {
+        display: none;
+    }
+
+    #menu:checked ~ label .fa-bars {
+        display: none;
+    }
+
+    #menu:checked ~ label .fa-times {
+        display: block;
+    }
+
+    img .fp_photo {
+        width: 130px;
+        height: 130px;
+    }
+
+    div .life_college {
+        top: 1041px;
+        width: 667px;
+    }
+
+    div .post {
+        left: -2px;
+        top: 147px;
+        width: 645px;
+    }
+
+}
+
+@media (max-width: 1020px) {
+    div .effect {
+        width: 30ch;
+        animation: anim1 2.5s steps(35), anim2 .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 29px;
+    }
+
+    div .lmsk {
+        font: italic small-caps bold 18px/2 cursive;
+        font-size: 37px;
+    }
+
+    div .fp_body {
+        position: absolute;
+        top: 39px;
+        left: 213px;
+        font-size: 25px;
+        text-align: left;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        text-transform: none;
+        line-height: 41px;
+    }
+}
+
+@media (max-width: 768px) {
+    div .fp_body {
+        line-height: 45px;
+    }
+}
+
+.content {
+    position: absolute;
+    font-family: 'Paytone One', sans-serif;
+    left: 357px;
+    top: 50px;
+    box-sizing: border-box;
+}
+
+.content h2{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+}
+.content h2:nth-child(1){
+  color: transparent;
+  -webkit-text-stroke: 1px #03a9f4;
+}
+
+.content h2:nth-child(2){
+  color: #03a9f4;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate{
+  0%,100%{
+  clip-path: polygon(0% 59%, 6% 64%, 12% 68%, 19% 69%, 28% 69%, 38% 68%, 46% 65%, 53% 59%, 59% 52%, 67% 46%, 76% 41%, 84% 40%, 94% 39%, 100% 39%, 100% 100%, 0 100%);}
+
+  50%{
+ clip-path: polygon(0% 59%, 7% 53%, 14% 47%, 22% 40%, 32% 41%, 39% 44%, 46% 52%, 52% 59%, 56% 65%, 64% 72%, 72% 74%, 82% 75%, 91% 69%, 100% 59%, 100% 100%, 0 100%);
+
+
+  }
+}
